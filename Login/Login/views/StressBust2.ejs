@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+    body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container
+{
+    position: relative;
+    width: 1600px;
+    height: 200px;
+    margin: 240px auto;
+}
+
+.container .Title
+{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    padding: 0;
+    color: rgba(1, 1, 116, 0.999);
+    margin: 0;
+
+}
+.container .box
+{
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: rgba(1, 1, 116, 0.999);
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container .box .icon
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(3, 205, 255);
+    transition: 0.5s;
+    z-index: 1;
+}
+.container .box:hover .icon
+{
+    top: 20px;
+    left: calc(50%-40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+.container .box .icon .fa
+{
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+.container .box:hover .icon .fa
+{
+    font-size: 20px;
+}
+
+.container .box .content
+{
+    position: absolute;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;   
+}
+.container .box:hover .content
+{
+    top: 50px;
+    opacity: 1;
+}
+
+.container .box .content h4
+{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+
+}
+
+.container .box .content p
+{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    
+    
+}
+
+.container .box .Link 
+{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+}
+    </style>
+<head>
+     <title>StressBust</title>
+    <link rel="stylesheet" type="text/css" href="StressBust.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="Title">
+            <h1>WEEK-2</h1>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+                <h4>9.Read Good Story
+                </h4>
+                <p>It may be hard for some people to dig into a good book but once you get a habbit of reading the ability of books that transports you out of your life is a positive distraction.
+   
+                </p>
+                <a href="https://www.realsimple.com/work-life/relaxing-books" class="Link">&times;REFERENCE FOR GOOD BOOK</a> 
+                
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+                <h4>10.Singing
+                </h4>
+                <p>Singing lowers stress, relieves anxiety, and elevates endorphins which make you feel uplifted and happy.  
+                </p>
+                <a href="https://www.karafun.com/karaoke/" class="Link">&times;How about a karaoke?</a> 
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>11.Neuroplasticity
+                </h4>
+                <p>Neuroplasticity is the brain's ability to reorganize pathways, create new connections, and, in some cases, even create new neurons with release of stress releiving hormones
+                </p>
+                <a href="https://www.youtube.com/watch?v=jwlNOUnGqYA" class="Link">&times;NEUROPLASTICITY EXERCISE REFERENCE</a> 
+
+            </div>
+        </div>
+       
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>12.Water
+                </h4>
+                <p> Drinking water is a simple, effective, but often overlooked tool to help improve physical, mental, and emotional health. 
+                </p>
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>13.Rest
+                </h4>
+                <p>Sleep and rest are  depression-prevention activities. If you rest well it makes your mind happy and work efficiently the next day 
+               
+                </p>
+                 
+
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>14.Practice Mindfullness
+                </h4>
+                <p>Mindfulness involves focusing on the present moment. It stops people from concentrating on the past or worrying about the future.
+                </p>
+                <a href="https://www.youtube.com/watch?v=ZToicYcHIOU" class="Link">&times;PRACTICE MINDFULLNESS</a> 
+
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>15.Eat a balance diet 
+                </h4>
+                <p>Eating a balanced, nutritious diet can help prevent deficiencies and keep a person feeling physically well, which can support mental health.
+
+                </p>
+                <a href="https://www.healthline.com/health/balanced-diet" class="Link">&times;BALANCE DIET GUIDE</a> 
+                
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>16.Spirituality
+                </h4>
+                <p>Having a spiritual life alleviates depression for some patients.
+                </p>
+                <a href="https://www.youtube.com/watch?v=fdHjqVEQvLw" class="Link">&times;SPIRITUALITY GUIDE</a> 
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>

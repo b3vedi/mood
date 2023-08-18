@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+.button {
+    left: 1%;
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 10%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+.makebox
+       {
+           left: 1%;
+           width: 25%;
+           border-radius: 10px;
+           border-style: solid;
+           font-size: 18px;
+           background-color: rgb(199, 211, 218);
+           margin: auto;
+           border: solid;
+       }
+
+.button:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #f43543;
+}
+.wrapper {
+  width: 400px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  bottom: 10%;
+}
+
+
+.button-71 {
+  background-color: #0078d0;
+  border: 0;
+  left: 18%;;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
+.container {
+  width: 100%;
+  background-color: #f43543;
+  padding: 50px 40px;
+  box-shadow: 0 20px 65px rgba(87, 11, 16, 0.5);
+  position: relative;
+  border-radius: 8px;
+  text-align: center;
+  top: 15%;
+}
+.container:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 120%;
+  background-color: #ffffff;
+  z-index: -1;
+  top: -10%;
+  left: 10%;
+}
+.container p {
+  color: #fdd8d8;
+  line-height: 2;
+  font-size: 18px;
+}
+.container h3 {
+  color: #ffffff;
+  margin: 20px 0 60px 0;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.container button {
+  background-color: #ffffff;
+  border: none;
+  padding: 15px 45px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f43543;
+  cursor: pointer;
+}
+.rightside
+{
+  position: absolute;
+  top: 33%;
+  left:70%;
+  padding: 15px;
+  width: 25%;
+           border-radius: 10px;
+           border-style: solid;
+           font-size: 18px;
+           background-color:#FFFFFF;
+           border: solid;
+}
+.userstat
+{
+  position: absolute;
+  top: 33%;
+  right:68%;
+  padding: 15px;
+  width: 30%;
+  
+           border-radius: 10px;
+           border-style: solid;
+           font-size: 18px;
+           background-color:#FFFFFF;
+           border: solid;
+           font-family: "Lobster",sans-serif;
+}
+p{
+  font-family: "Lobster",sans-serif;
+  font-size: 18px;
+}
+    body
+    {
+background-color: blanchedalmond;
+    }
+    h1{
+        font-family:Arial, Helvetica, sans-serif;
+    }
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBuddy-Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+</head>
+<body>
+    
+    <h1 align="center"><br>MyBuddy <form action="/" style="display: inline;">
+    <button type="submit" style="margin-left: 75%;" class="button">Sign Out</button><br></form>
+</h1>
+    <br><hr><br>
+    <form style="display: inline;" action="home">
+    <button type="submit" class="button">Home</button></form>
+    <form style="display: inline;" action="contactus">
+    <button type="submit" class="button">Contact Us</button></form>
+    <form style="display: inline;" action="aboutus">
+    <button type="submit" class="button">About Us</button><br></form>
+        <br><br><br><br><br><br>
+<div class="userstat"><p><form action="#" method="post" style="text-align: center; font-family:Lobster,sans-serif; font-size: 18px;">
+   <form method="post" name="ur" >Hello <%=data[0].FirstName%></form><br>Given below are your reports for your most recent mental assesments
+<br><form method="post" name="ms" style="text-align: center; font-family:Lobster,sans-serif; font-size: 18px;">
+Mood: <%=data[0].MoodScore%></form><br><form method="post" name="as" style="text-align: center; font-family:Lobster,sans-serif; font-size: 18px;">Symptoms: <%=data[0].symptom1%><br> <%=data[0].symptom2%><br><%=data[0].symptom3%></form></form><br></p>
+    <br>
+<p style="margin-left: 1%;">Don't know any good pyschologists near you?<br>We've got you covered Buddy</p>
+<br>
+<form action="cspy"><button type="submit" class="button-71">Consult a psychiatrist</button></form></div>
+<br><br><br><br>
+<div class="wrapper">
+    <div class="container">
+      <p id="quote">
+        
+      </p>
+      <h3 id="author">Lorem, ipsum.</h3>
+      <button id="btn">Get Quote</button>
+    </div>
+  </div>
+  <div class="rightside">
+    <p>Welcome to MyBuddy, your very own mental health tracker<br>Given below are the two assesments for your mental health screening<br>Give it a go whenever you're ready<br>Happy Buddying!</p><br>
+    <form action="mtest"><button type="submit" class="button-71">Mood Test</button></form>
+    <br>
+    <form action="SRQ"><button type="submit" class="button-71">Assesment</button></form>
+    <br>
+    <form action="task1"><button type="submit" class="button-71">My  Tasks</button></form>
+  
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

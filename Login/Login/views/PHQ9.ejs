@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7f7 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.quiz-container{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 600px;
+  overflow: hidden;
+  position: relative;
+  right: 10%;
+  top:10%
+
+}
+.quiz-header{
+  padding: 4rem;
+}
+h2{
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+h1
+{
+  margin-top: 5%;
+  position: relative;
+  right:15%;
+  bottom: 45%;  
+}
+h3
+{
+    position: absolute;
+    left: 4%;
+    top: 11%;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+ul li{
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+ul li label{
+  cursor: pointer;
+}
+button{
+  background-color: #03cae4;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1.3rem;
+}
+button:hover{
+  background-color: #04adc4;
+}
+button:focus{
+  outline: none;
+  background-color: #44b927;
+}
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assesment-MyBuddy</title>
+    <h1>Test 3: Depression Test</h1>
+    <h3>Over the last two weeks, how often have you been bothered by the folowing problems?</h3>
+</head>
+<body>
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+          <h2 id="question">Question Text</h2>
+          <ul>
+            <li>
+              <input type="radio" name="answer" id="a" class="answer">
+              <label for="a" id="a_text">Answer</label>
+            </li>
+    
+            <li>
+              <input type="radio" name="answer" id="b" class="answer">
+              <label for="b" id="b_text">Answer</label>
+            </li>
+    
+            <li>
+                <input type="radio" name="answer" id="c" class="answer">
+                <label for="c" id="c_text">Answer</label>
+              </li>
+
+              <li>
+                <input type="radio" name="answer" id="d" class="answer">
+                <label for="d" id="d_text">Answer</label>
+              </li>
+    
+          </ul>
+        </div>
+    
+        <button id="submit">Submit</button>
+    
+      </div>
+</body>
+</html>
+<script>
+        const quizData = [  
+  {  
+   question: "Little interest or pleasure in doing things",  
+   a: "Not at all",  
+   b: "Several days",
+   c: "More than half the days",
+   d: "Nearly every day",  
+   correct: "d",
+   less_correct:"c",
+   lesser_correct:"b",
+  },  
+  {  
+   question: "Feeling down, depressed or hopeless",  
+   a: "Not at all",  
+   b: "Several days",
+   c: "More than half the days",
+   d: "Nearly every day",  
+   correct: "d",
+   less_correct:"c",
+   lesser_correct:"b",
+  },
+  {  
+   question: "Trouble falling or staying asleep, or sleeping too much",  
+   a: "Not at all",  
+   b: "Several days",
+   c: "More than half the days",
+   d: "Nearly every day",  
+   correct: "d",
+   less_correct:"c",
+   lesser_correct:"b",
+  },
+  {  
+   question: "Feeling tired or having little energy",  
+   a: "Not at all",  
+   b: "Several days",
+   c: "More than half the days",
+   d: "Nearly every day",  
+   correct: "d",
+   less_correct:"c",
+   lesser_correct:"b",
+  },
+  {  
+   question: "Poor appetite or overeating",  
+   a: "Not at all",  
+   b: "Several days",
+   c: "More than half the days",
+   d: "Nearly every day",  
+   correct: "d",
+   less_correct:"c",
+   lesser_correct:"b",
+  },
+  {  
+   question: "Feeling bad about yourself - or that you are a failure or have let yourself or your family down",  
+   a: "Not at all",  
+   b: "Several days",
+   c: "More than half the days",
+   d: "Nearly every day",  
+   correct: "d",
+   less_correct:"c",
+   lesser_correct:"b",
+  },
+  {  
+   question: "Trouble concentrating on things, such as reading the newsapaper or watching television",  
+   a: "Not at all",  
+   b: "Several days",
+   c: "More than half the days",
+   d: "Nearly every day",  
+   correct: "d",
+   less_correct:"c",
+   lesser_correct:"b",
+  },
+  {  
+   question: "Moving or speaking so slowly that other people could have noticed or the opposite - being so fidgety or restless that you have been moving around a lot more than usual",  
+   a: "Not at all",  
+   b: "Several days",
+   c: "More than half the days",
+   d: "Nearly every day",  
+   correct: "d",
+   less_correct:"c",
+   lesser_correct:"b",
+  },
+  {  
+   question: "Thoughts that you would be better off dead or of hurting yourself in some way",  
+   a: "Not at all",  
+   b: "Several days",
+   c: "More than half the days",
+   d: "Nearly every day",  
+   correct: "d",
+   less_correct:"c",
+   lesser_correct:"b",
+  },
+ ];  
+ const quiz = document.getElementById("quiz");  
+ const answerElements = document.querySelectorAll(".answer");  
+ const questionElement = document.getElementById("question");  
+ const a_text = document.getElementById("a_text");  
+ const b_text = document.getElementById("b_text");
+ const c_text = document.getElementById("c_text");  
+ const d_text = document.getElementById("d_text");  
+ const submitButton = document.getElementById("submit");  
+ let currentQuiz = 0;  
+ let score = 0;
+ let xhr = new XMLHttpRequest();
+let url = "http://localhost:7080/PHQ9";
+xhr.open("POST", url, true);
+xhr.setRequestHeader("Content-Type", "application/json");  
+ const deselectAnswers = () => {  
+  answerElements.forEach((answer) => (answer.checked = false));  
+ };  
+ const getSelected = () => {  
+  let answer;  
+  answerElements.forEach((answerElement) => {  
+   if (answerElement.checked) answer = answerElement.id;  
+  });  
+  return answer;  
+ };  
+ const loadQuiz = () => {  
+  deselectAnswers();  
+  const currentQuizData = quizData[currentQuiz];  
+  questionElement.innerText = currentQuizData.question;  
+  a_text.innerText = currentQuizData.a;  
+  b_text.innerText = currentQuizData.b;
+  c_text.innerText = currentQuizData.c;
+  d_text.innerText = currentQuizData.d;    
+ };  
+ loadQuiz();  
+ submitButton.addEventListener("click", () => {  
+  const answer = getSelected();  
+  if (answer) {  
+   if (answer === quizData[currentQuiz].correct) score=score+3;
+   else if (answer === quizData[currentQuiz].less_correct) score=score+2;
+   else if (answer === quizData[currentQuiz].lesser_correct) score=score+1;  
+   currentQuiz++;  
+   if (currentQuiz < quizData.length) loadQuiz();  
+   else {  
+    quiz.innerHTML = `  
+       <h2>Well done!!<br>Depression Test Completed<br>Press the fininsh button to return to home page</h2>
+       <form action="home">  
+       <button type="submit">Finish</button></form>  
+     `   
+   }
+   if(currentQuiz === quizData.length)
+   {
+   console.log(score);
+   if(score>=9)
+     {
+       symptom="Depression"
+     var arr = {
+       sc:score,
+       sym:symptom 
+     };
+    }
+    else
+    {
+      symptom=" "
+      var arr = {
+        sc:score,
+        sym:symptom 
+      };
+    }
+   let jsonstring = JSON.stringify(arr);
+   console.log(jsonstring);
+   xhr.send(jsonstring);  
+}  
+}
+ });   
+</script>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7f7 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.quiz-container{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 600px;
+  overflow: hidden;
+  position: relative;
+  right: 7%;
+}
+.quiz-header{
+  padding: 4rem;
+}
+h2{
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+h1
+{
+  margin-top: 5%;
+  position: relative;
+  right:15%;
+  bottom: 45%;  
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+ul li{
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+ul li label{
+  cursor: pointer;
+}
+button{
+  background-color: #03cae4;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1.3rem;
+}
+button:hover{
+  background-color: #04adc4;
+}
+button:focus{
+  outline: none;
+  background-color: #44b927;
+}
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assesment-MyBuddy</title>
+    <h1>Test 1: Stress Test</h1>
+</head>
+<body>
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+          <h2 id="question">Question Text</h2>
+          <ul>
+            <li>
+              <input type="radio" name="answer" id="a" class="answer">
+              <label for="a" id="a_text">Answer</label>
+            </li>
+    
+            <li>
+              <input type="radio" name="answer" id="b" class="answer">
+              <label for="b" id="b_text">Answer</label>
+            </li>
+    
+            
+    
+          </ul>
+        </div>
+    
+        <button id="submit">Submit</button>
+    
+      </div>
+</body>
+</html>
+<script>
+  const quizData = [  
+    {  
+     question: "Do you often have headaches?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },  
+    {  
+     question: "Is your appetite poor?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",
+    },  
+    {  
+     question: "Do you sleep badly",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",
+    },  
+    {  
+     question: "Are you easily frightened?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Do your hands shake?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Do you feel tensed or worried?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Is your digestion poor?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Do you have trouble thinking clearly?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Do you feel unhappy?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Do you cry more than usual?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Do you find it difficult to enjoy you daily activities?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Do you find it difficult to make decisions?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Is your daily work suffering?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Are you unable to play a useful part in life?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Have you lost interest in things?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Do you feel that you are a worthless person?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Has the thought of ending the life been on your mind?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Do you feel tired all the time?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Do you have uncomfortable feelings in your stomach?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },
+    {  
+     question: "Are you easily tired?",  
+     a: "Yes",  
+     b: "No",  
+     correct: "a",  
+    },  
+   ];  
+   const quiz = document.getElementById("quiz");  
+   const answerElements = document.querySelectorAll(".answer");  
+   const questionElement = document.getElementById("question");  
+   const a_text = document.getElementById("a_text");  
+   const b_text = document.getElementById("b_text");  
+   const submitButton = document.getElementById("submit");  
+   let currentQuiz = 0;  
+   let score = 0;
+   var symptom;
+   var xhr = new XMLHttpRequest();
+  xhr.open("POST", "http://localhost:7080/SRQ", true);
+  xhr.setRequestHeader("Content-Type", "application/json");  
+   const deselectAnswers = () => {  
+    answerElements.forEach((answer) => (answer.checked = false));  
+   };  
+   const getSelected = () => {  
+    let answer;  
+    answerElements.forEach((answerElement) => {  
+     if (answerElement.checked) answer = answerElement.id;  
+    });  
+    return answer;  
+   };  
+   const loadQuiz = () => {  
+    deselectAnswers();  
+    const currentQuizData = quizData[currentQuiz];  
+    questionElement.innerText = currentQuizData.question;  
+    a_text.innerText = currentQuizData.a;  
+    b_text.innerText = currentQuizData.b;    
+   };  
+   loadQuiz();  
+   submitButton.addEventListener("click", () => {  
+    const answer = getSelected();  
+    if (answer) {  
+     if (answer === quizData[currentQuiz].correct) score++;  
+     currentQuiz++;  
+     if (currentQuiz < quizData.length) loadQuiz();  
+     else {  
+      quiz.innerHTML = `  
+         <h2>Well done!!<br>Stress Test Completed<br>Press the next button to proceed further</h2>
+         <form action="GAD7">  
+         <button type="submit">Next</button></form>  
+       `   
+     }
+     if(currentQuiz === quizData.length)
+     {
+     console.log(score);
+     if(score>=8)
+     {
+       symptom="stress"
+     var arr = {
+       sc:score,
+       sym:symptom 
+     };
+    }
+    else
+    {
+      symptom=" "
+      var arr = {
+        sc:score,
+        sym:symptom 
+      };
+    }
+     var open = window.XMLHttpRequest.prototype.open,  
+  send = window.XMLHttpRequest.prototype.send;
+
+function openReplacement(method, url, async, user, password) {  
+  this._url = url;
+  return open.apply(this, arguments);
+}
+
+function sendReplacement(data) {  
+  if(this.onreadystatechange) {
+    this._onreadystatechange = this.onreadystatechange;
+  }
+ 
+  console.log('Request sent');
+  
+  this.onreadystatechange = onReadyStateChangeReplacement;
+  return send.apply(this, arguments);
+}
+
+function onReadyStateChangeReplacement() {  
+  
+  console.log('Ready state changed to: ', this.readyState);
+  
+  if(this._onreadystatechange) {
+    return this._onreadystatechange.apply(this, arguments);
+  }
+}
+
+window.XMLHttpRequest.prototype.open = openReplacement;  
+window.XMLHttpRequest.prototype.send = sendReplacement;
+
+     var jsonstring = JSON.stringify(arr);
+     console.log(jsonstring);
+     xhr.send(jsonstring);
+     xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 &&
+                    xhr.status === 200) {
+                    // Print received data from server
+                    console.log(this.responseText);
+                }
+            };  
+  }  
+  }
+   });   
+</script>

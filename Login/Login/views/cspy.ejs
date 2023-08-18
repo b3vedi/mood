@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+.button-58 {
+  align-items: center;
+  background-color: #06f;
+  border: 1px solid #06f;
+  box-sizing:border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  height: 35px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 20px;
+  min-width: 40px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-58:focus {
+  color: #171e29;
+}
+
+.button-58:hover {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+}
+
+.button-58:active {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+  .button-58 {
+    min-width: 170px;
+  }
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #376aa5;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+body{
+    background-color: white;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #164f57;
+}
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult a Psychiatrist</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <h1 style="font-family: 'Poppins',sans-serif;">Consult a Psychiatrist</h1>
+    <hr>
+    <form action="home"><button class="button-58">Back to Home page</button></form>
+    <br><br>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last name</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if(data.length){
+                for(var i = 0; i< data.length; i++) {%>
+
+            <tr>
+                <td><%= data[i].FirstName%></td>
+                <td><%= data[i].MiddleName%></td>
+                <td><%= data[i].LastName%></td>
+                <td><%= data[i].Address%></td>
+                <td><%= data[i].PhoneNo%></td>
+            </tr>
+            <% }
+        }
+        else
+        {%>
+            <tr>
+                <td colspan="3">No user</td>
+             </tr>
+
+         <%} %> 
+        </tbody>
+    </table>
+</body>
+</html>

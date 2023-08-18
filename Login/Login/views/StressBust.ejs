@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+       body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container
+{
+    position: relative;
+    width: 1600px;
+    height: 200px;
+    margin: 240px auto;
+}
+
+.container .Title
+{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    padding: 0;
+    color: rgba(1, 1, 116, 0.999);
+    margin: 0;
+
+}
+.container .box
+{
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: rgba(1, 1, 116, 0.999);
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container .box .icon
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(3, 205, 255);
+    transition: 0.5s;
+    z-index: 1;
+}
+.container .box:hover .icon
+{
+    top: 20px;
+    left: calc(50%-40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+.container .box .icon .fa
+{
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+.container .box:hover .icon .fa
+{
+    font-size: 20px;
+}
+
+.container .box .content
+{
+    position: absolute;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;   
+}
+.container .box:hover .content
+{
+    top: 50px;
+    opacity: 1;
+}
+
+.container .box .content h4
+{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+
+}
+
+.container .box .content p
+{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    
+    
+}
+
+.container .box .Link 
+{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+}
+    </style>
+<head>
+     <title>Tasks-Week 1</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="Title">
+            <h1>WEEK-1</h1>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>1.Do Exercise
+                </h4>
+                <p>Quick bursts of movement are great if your stress is making you feel jittery or like your heart is beating faster than normal.
+                </p>
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>2.Give yourself a massage
+                </h4>
+                <p>It reduces stress and improves circulation all over body
+
+                </p>
+                
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>3.Dance carefree
+                </h4>
+                <p>Dancing to music from a happy time and place in your life can trigger positive memories, as well, taking your mind off your stress. 
+
+                </p>
+                <a href="https://open.spotify.com/playlist/37i9dQZF1DX0BcQWzuB7ZO" class="Link">&times;Try this spotify Playlist</a>
+            </div>
+        </div>
+       
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>4.Take a bath
+                </h4>
+                <p>Run a bath and sink on in. By changing the body temperature, it’s the full sensory slowing down—it’s kind of like rebooting a computer that has all these windows open doing too much processing. 
+                </p>
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>5.Try Knitting
+                </h4>
+                <p>Assuming you like crafting there is evidence that the repetitive action of clicking your needles can be meditative and calming
+
+                </p>
+                <a href="https://www.youtube.com/watch?v=Egp4NRhlMDg" class="Link">&times;Knitting Tutorial</a>
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>6.Stretch Yourself
+                </h4>
+                <p>You dont even need to own a yoga mat, let alone be physically flexible, to reap the benefits of this ancient practice
+                </p>
+                <a href="https://www.youtube.com/watch?v=iqcAWup2aCE" class="Link">&times;Yoga TUTORIAL FOR REFERENCE</a>
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>7.Medidate 
+                </h4>
+                <p>This is another well-researched stress-relieving practice that people are intimidated by but is actually super simple and really effective once you just do it, even for two minutes. 
+                    <a href="https://www.youtube.com/watch?v=54wc1r-toAw" class="Link">&times;Meditation Tutorial</a>
+
+                </p>
+
+            </div>
+        </div>
+        <div class ="box">
+            <div class="icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+            <div class="content">
+               
+                <h4>8.Doodle
+                </h4>
+                <p>You dont have to have any skill at art to just let your pen have its way with the page, or even easier, pick up an adult coloring book. Anything that can get you out of your head, if you enjoy it, can be a stress reliever. 
+                </p>
+                <a href="https://coloringbookaddict.com/top-10-stress-relieving-adult-coloring-books/" class="Link">&times;Some Recommendations</a>
+
+            </div>
+        </div>
+            
+    </div>
+    
+        <form action="task2"><button type="submit" class="button-71">Week-2</button></form>
+</body>
+</html>

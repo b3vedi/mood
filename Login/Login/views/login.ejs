@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<style>
+       .bgclr{
+        background-image:  url(Login.jpg);
+        background-repeat: no-repeat;
+        background-size: 2000px 768px;
+    } 
+       .lgclr{
+           background-color: wheat;
+           align-self: center;
+       }
+       .makebox
+       {
+           width: 20%;
+           align-items: center;
+           border-radius: 10px;
+           font-size: 18px;
+           margin: 5px;
+           padding: 10px;
+       }
+       .button:hover{
+           background-color: antiquewhite;
+           transition: all 0.2s ease-in-out;
+           color: black;
+           box-shadow: 0 12px 16px 0 rgba(165, 148, 148, 0.315), 0 17px 50px 0 rgba(165, 148, 148, 0.315);
+           cursor: pointer;
+       }
+       .button
+       {
+        font-size: 14px;
+           padding: 10px;
+           margin: 5px;
+           border-radius: 10px;
+       }
+        h1
+        {
+            color: white;
+        }
+#ur{
+font-size: 14px;
+}
+#pw{
+font-size: 14px;
+}        
+        </style>
+    <head>
+<title>
+        MyBuddy
+</title>
+<h1 align = center>
+    MyBuddy
+</h1>
+<h2 style="color: white;">
+    Welcome to MyBuddy your very own Mental Health Tracker
+</h2>
+</head>
+<br><br><br>
+<body class=bgclr>
+<form action="#" method="post">
+<div align = center class="lgclr makebox">
+    <label for="authenticate"><strong>Login</strong></label>
+    <br><br><br>
+    <form action="Home.html" method="post">
+    <label for ="Username">Username</label>
+<input name="ur" type="text" required>
+<br><br>
+<label for ="password">Password</label>
+<input name="pw" type="password"  required>
+<br><br><button class="button:hover button" type="submit">Sign in</button><br>
+Don't have myBuddy account?
+</form>
+<form action="#" method="post">
+<form action="Signup.html">
+<button class="button:hover button" type="submit">Sign up for free</button><br>
+</div>
+</form>
+</body>
+    </html>
